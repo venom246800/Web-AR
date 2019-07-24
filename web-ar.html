@@ -1,0 +1,450 @@
+<!doctype HTML>
+<html>
+<head>
+  <title>Fidelity AR Project</title>
+  <script type="text/javascript" src="js/aframe.js"></script>
+  <script type="text/javascript" src="js/ar.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript" scr="js/button.js"></script>
+  <script type="text/javascript" src="js/events.js"></script> 
+  <link rel="stylesheet" type="text/css" href="css/button.css">
+  <script>
+    var x = 0;
+    var y = 0;
+    
+    function playFunction() {
+        const startScreen = document.querySelector("#start-plane");
+        const startText = document.querySelector("#start-text");
+
+        const xAxis = document.querySelector("#x-axis");
+        const yAxis = document.querySelector("#y-axis");        
+
+        const aBar1 = document.querySelector("#bar1");
+        const aBar2 = document.querySelector("#bar2");
+        const aBar3 = document.querySelector("#bar3");
+        const aBar4 = document.querySelector("#bar4");
+        const aBar5 = document.querySelector("#bar5");
+        const aBar6 = document.querySelector("#bar6");
+
+        const aPop1 = document.querySelector("#pop1");
+        const aPop2 = document.querySelector("#pop2");
+        
+        const aVid = document.querySelector("#vid");
+
+        const aScreen = document.querySelector("#screen");
+        const aText = document.querySelector("#text");
+
+        console.log("Function 1 Called")
+          if(x==1)
+            {
+              x=0;
+              document.querySelector('#vid-ast').pause();
+            }    
+            else
+            {
+              x=1;
+              document.querySelector('#vid-ast').play();
+              aVid.setAttribute('visible','true');
+            }
+            aScreen.setAttribute('visible','false');
+            aText.setAttribute('visible','false');  
+    }
+
+    function infoFunction() {
+        const startScreen = document.querySelector("#start-plane");
+        const startText = document.querySelector("#start-text");
+
+        const xAxis = document.querySelector("#x-axis");
+        const yAxis = document.querySelector("#y-axis");        
+
+        const aBar1 = document.querySelector("#bar1");
+        const aBar2 = document.querySelector("#bar2");
+        const aBar3 = document.querySelector("#bar3");
+        const aBar4 = document.querySelector("#bar4");
+        const aBar5 = document.querySelector("#bar5");
+        const aBar6 = document.querySelector("#bar6");
+
+        const aPop1 = document.querySelector("#pop1");
+        const aPop2 = document.querySelector("#pop2");
+        
+        const aVid = document.querySelector("#vid");
+
+        const aScreen = document.querySelector("#screen");
+        const aText = document.querySelector("#text");
+
+        console.log("Function 2 Called")
+          if(y==0){
+                y=1;
+                aScreen.setAttribute('visible','true');  
+                aText.setAttribute('visible','true');
+            }
+            else{
+                y=0;
+                aScreen.setAttribute('visible','false');
+                aText.setAttribute('visible','false');
+            }
+            aVid.setAttribute('visible','false');
+            document.querySelector('#vid-ast').pause();
+    }
+
+    function year16Function() {
+        const startScreen = document.querySelector("#start-plane");
+        const startText = document.querySelector("#start-text");
+
+        const xAxis = document.querySelector("#x-axis");
+        const yAxis = document.querySelector("#y-axis");        
+
+        const aBar1 = document.querySelector("#bar1");
+        const aBar2 = document.querySelector("#bar2");
+        const aBar3 = document.querySelector("#bar3");
+        const aBar4 = document.querySelector("#bar4");
+        const aBar5 = document.querySelector("#bar5");
+        const aBar6 = document.querySelector("#bar6");
+
+        const aPop1 = document.querySelector("#pop1");
+        const aPop2 = document.querySelector("#pop2");
+        
+        const aVid = document.querySelector("#vid");
+
+        const aScreen = document.querySelector("#screen");
+        const aText = document.querySelector("#text");
+
+        console.log("Function 3 Called")
+        const position1 = aBar1.getAttribute('position');
+        const position2 = aBar2.getAttribute('position');
+        const position3 = aBar3.getAttribute('position');
+        const position4 = aBar4.getAttribute('position');
+        const position5 = aBar5.getAttribute('position');
+        const position6 = aBar6.getAttribute('position');
+
+        position1['z']='0.35';
+        position2['z']='0.3';
+        position3['z']='0.25';
+        position4['z']='0.35';
+        position5['z']='0.4';
+        position6['z']='0.2';
+        
+        aBar1.setAttribute('depth','0.3');
+        aBar1.setAttribute('position',position1);
+        aBar2.setAttribute('depth','0.4');
+        aBar2.setAttribute('position',position2);
+        aBar3.setAttribute('depth','0.5');
+        aBar3.setAttribute('position',position3);
+        aBar4.setAttribute('depth','0.3');
+        aBar4.setAttribute('position',position4);
+        aBar5.setAttribute('depth','0.2');
+        aBar5.setAttribute('position',position5);
+        aBar6.setAttribute('depth','0.6');
+        aBar6.setAttribute('position',position6);
+
+
+        /*const position7 = aBar5.getAttribute('position');
+        const depth = aBar5.getAttribute('depth');
+        const d = (depth/2)+0.2;
+        position7['z']-=d;
+        pop1.setAttribute('position',position7);
+        position7['z']+=d;
+        aBar5.setAttribute('position',position7);
+        const visible = pop1.getAttribute('visible');
+        if(visible)
+        {
+          pop1.setAttribute('visible','false');
+        }
+        else
+        {
+          pop1.setAttribute('visible','true');
+        }
+        const position8 = aBar6.getAttribute('position');
+        const depth = aBar6.getAttribute('depth');
+        const d = (depth/2)+0.2;
+        position8['z']-=d;
+        pop2.setAttribute('position',position8);
+        position8['z']+=d;
+        aBar6.setAttribute('position',position8);
+        const visible = pop2.getAttribute('visible');
+        if(visible)
+        {
+          pop2.setAttribute('visible','false');
+        }
+        else
+        {
+          pop2.setAttribute('visible','true');
+        }*/
+
+    }
+    function year17Function() {
+        const startScreen = document.querySelector("#start-plane");
+        const startText = document.querySelector("#start-text");
+
+        const xAxis = document.querySelector("#x-axis");
+        const yAxis = document.querySelector("#y-axis");        
+
+        const aBar1 = document.querySelector("#bar1");
+        const aBar2 = document.querySelector("#bar2");
+        const aBar3 = document.querySelector("#bar3");
+        const aBar4 = document.querySelector("#bar4");
+        const aBar5 = document.querySelector("#bar5");
+        const aBar6 = document.querySelector("#bar6");
+
+        const aPop1 = document.querySelector("#pop1");
+        const aPop2 = document.querySelector("#pop2");
+        
+        const aVid = document.querySelector("#vid");
+
+        const aScreen = document.querySelector("#screen");
+        const aText = document.querySelector("#text");
+
+        console.log("Function 4 Called")
+
+        const position1 = aBar1.getAttribute('position');
+        const position2 = aBar2.getAttribute('position');
+        const position3 = aBar3.getAttribute('position');
+        const position4 = aBar4.getAttribute('position');
+        const position5 = aBar5.getAttribute('position');
+        const position6 = aBar6.getAttribute('position');
+
+        position1['z']='0.3';
+        position2['z']='0.35';
+        position3['z']='0.4';
+        position4['z']='0.2';
+        position5['z']='0.1';
+        position6['z']='0.35';
+        
+        aBar1.setAttribute('depth','0.4');
+        aBar1.setAttribute('position',position1);
+        aBar2.setAttribute('depth','0.3');
+        aBar2.setAttribute('position',position2);
+        aBar3.setAttribute('depth','0.2');
+        aBar3.setAttribute('position',position3);
+        aBar4.setAttribute('depth','0.6');
+        aBar4.setAttribute('position',position4);
+        aBar5.setAttribute('depth','0.8');
+        aBar5.setAttribute('position',position5);
+        aBar6.setAttribute('depth','0.3');
+        aBar6.setAttribute('position',position6);
+        
+    }
+    function year18Function() {
+        const startScreen = document.querySelector("#start-plane");
+        const startText = document.querySelector("#start-text");
+
+        const xAxis = document.querySelector("#x-axis");
+        const yAxis = document.querySelector("#y-axis");        
+
+        const aBar1 = document.querySelector("#bar1");
+        const aBar2 = document.querySelector("#bar2");
+        const aBar3 = document.querySelector("#bar3");
+        const aBar4 = document.querySelector("#bar4");
+        const aBar5 = document.querySelector("#bar5");
+        const aBar6 = document.querySelector("#bar6");
+
+        const aPop1 = document.querySelector("#pop1");
+        const aPop2 = document.querySelector("#pop2");
+        
+        const aVid = document.querySelector("#vid");
+
+        const aScreen = document.querySelector("#screen");
+        const aText = document.querySelector("#text");
+
+        console.log("Function 5 Called")
+
+        const position1 = aBar1.getAttribute('position');
+        const position2 = aBar2.getAttribute('position');
+        const position3 = aBar3.getAttribute('position');
+        const position4 = aBar4.getAttribute('position');
+        const position5 = aBar5.getAttribute('position');
+        const position6 = aBar6.getAttribute('position');
+        
+        position1['z']='0.4';
+        position2['z']='0.2';
+        position3['z']='0.3';
+        position4['z']='0.35';
+        position5['z']='0.45';
+        position6['z']='0.25';
+        
+        aBar1.setAttribute('depth','0.2');
+        aBar1.setAttribute('position',position1);
+        aBar2.setAttribute('depth','0.6');
+        aBar2.setAttribute('position',position2);
+        aBar3.setAttribute('depth','0.4');
+        aBar3.setAttribute('position',position3);
+        aBar4.setAttribute('depth','0.3');
+        aBar4.setAttribute('position',position4);
+        aBar5.setAttribute('depth','0.1');
+        aBar5.setAttribute('position',position5);
+        aBar6.setAttribute('depth','0.5');
+        aBar6.setAttribute('position',position6);
+    }
+    function year19Function() {
+        const startScreen = document.querySelector("#start-plane");
+        const startText = document.querySelector("#start-text");
+
+        const xAxis = document.querySelector("#x-axis");
+        const yAxis = document.querySelector("#y-axis");        
+
+        const aBar1 = document.querySelector("#bar1");
+        const aBar2 = document.querySelector("#bar2");
+        const aBar3 = document.querySelector("#bar3");
+        const aBar4 = document.querySelector("#bar4");
+        const aBar5 = document.querySelector("#bar5");
+        const aBar6 = document.querySelector("#bar6");
+
+        const aPop1 = document.querySelector("#pop1");
+        const aPop2 = document.querySelector("#pop2");
+        
+        const aVid = document.querySelector("#vid");
+
+        const aScreen = document.querySelector("#screen");
+        const aText = document.querySelector("#text");
+
+        console.log("Function 6 Called")
+
+        const position1 = aBar1.getAttribute('position');
+        const position2 = aBar2.getAttribute('position');
+        const position3 = aBar3.getAttribute('position');
+        const position4 = aBar4.getAttribute('position');
+        const position5 = aBar5.getAttribute('position');
+        const position6 = aBar6.getAttribute('position');
+
+        position1['z']='0.35';
+        position2['z']='0.4';
+        position3['z']='0.32';
+        position4['z']='0.3';
+        position5['z']='0.26';
+        position6['z']='0.2';
+        
+        aBar1.setAttribute('depth','0.3');
+        aBar1.setAttribute('position',position1);
+        aBar2.setAttribute('depth','0.2');
+        aBar2.setAttribute('position',position2);
+        aBar3.setAttribute('depth','0.36');
+        aBar3.setAttribute('position',position3);
+        aBar4.setAttribute('depth','0.4');
+        aBar4.setAttribute('position',position4);
+        aBar5.setAttribute('depth','0.48');
+        aBar5.setAttribute('position',position5);
+        aBar6.setAttribute('depth','0.6');
+        aBar6.setAttribute('position',position6);
+    }
+
+
+  </script>
+</head>
+
+<body style='margin : 0px; overflow: hidden;'>
+    <!-- BUTTONS -->
+    <!-- play/pause Button -->
+    <button class="btn1" onclick="playFunction()">
+      <span>
+        PLAY/PAUSE
+      </span>
+    </button>
+    <!-- info button -->
+    <button class="btn2" onclick="infoFunction()">
+      <span>
+        INFORMATION
+      </span>
+    </button>
+    <!-- <div class="playBtn" id="playBtn" onclick="playFunction()">PLAY/PAUSE</div>
+    <div class="infoBtn" id="infoBtn" onclick="infoFunction()">INFO</div> --> 
+    <!-- year 2016 button -->
+    <button class="btn3" onclick="year16Function()">
+      <span>
+        <i class="fa fa-bar-chart">
+          <b>2016</b>
+        </i>
+      </span>
+    </button>
+
+    <!-- year 2017 button -->
+    <button class="btn4" onclick="year17Function()">
+      <span>
+        <i class="fa fa-bar-chart">
+          <b>2017</b>
+        </i>
+      </span>
+    </button>
+    <!-- <div class="year17" id="year17" onclick="year17Function()"><i class="fa fa-bar-chart"><b>  2017</b></i></div> --> 
+    <!-- year 2018 button -->
+    <button class="btn5" onclick="year18Function()">
+      <span>
+        <i class="fa fa-bar-chart">
+          <b>2018</b>
+        </i>
+      </span>
+    </button>
+    <!-- <div class="year18" id="year18" onclick="year18Function()"><i class="fa fa-bar-chart"><b>  2018</b></i></div>  -->
+    <!-- year 2019 button -->
+    <button class="btn6" onclick="year19Function()">
+      <span>
+        <i class="fa fa-bar-chart">
+          <b>2019</b>
+        </i>
+      </span>
+    </button>
+    <!-- <div class="year19" id="year19" onclick="year19Function()"><i class="fa fa-bar-chart"><b>  2019</b></i></div> --> 
+        
+
+    <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+
+      
+      <!-- VIDEO ASSET -->
+      <a-assets>
+            <video id="vid-ast" src="video/Pension.mp4" loop="true" crossorigin>
+      </a-assets>
+      
+
+        <a-marker markerhandler emitevents="true" cursor="rayOrigin: mouse" id="animated-marker" preset="custom" type="pattern" url="assets/pattern-innovation.patt">
+          
+
+          <!-- START WINDOW -->
+          <a-plane id ="start-plane" color="black" position='0 0.3 0' rotation='-90 0 0' height='1' width='1' visible='true'></a-plane>
+          <a-text id = 'start-text' value="Click here \n to Start" position = "-0.45 0.5 0" scale = "0.8 0.8 0.8" color = "WHITE" rotation="-90 0 0" visible='true'></a-text>
+          
+
+
+          <!-- AXIS -->
+          <a-box id = "x-axis" position='-0.52 0 0' material='color: #2d3436;' height='0.1' width='0.04' depth='1.08' visible='false'></a-box>
+          <a-box id = "y-axis" position='0.1 0 0.52' material='color: #2d3436;' height='0.1' width='1.28' depth='0.04' visible='false'></a-box>
+          
+          <!-- BARS -->
+          <a-box id ="bar1" position='-0.35 0 0.35' material='color: #a29bfe;' height='0.1' width='0.1' depth='0.3' visible='false'></a-box>
+          <a-box id ="bar2" position='-0.15 0 0.4' material='color: #a29bfe;' height='0.1' width='0.1' depth='0.2' visible='false'></a-box>
+          <a-box id ="bar3" position='0.05 0 0.32' material='color: #a29bfe;' height='0.1' width='0.1' depth='0.36' visible='false'></a-box>
+          <a-box id ="bar4" position='0.25 0 0.3' material='color: #a29bfe;' height='0.1' width='0.1' depth='0.4' visible='false'></a-box>
+          <a-box id ="bar5" position='0.45 0 0.26' material='color: #a29bfe;' height='0.1' width='0.1' depth='0.48' visible='false'></a-box>
+          <a-box id ="bar6" position='0.65 0 0.2' material='color: #a29bfe;' height='0.1' width='0.1' depth='0.6' visible='false'></a-box>
+
+          <!-- POPUPS -->
+          <a-entity 
+            id="pop1"
+            gltf-model=”url(assets/popup.gltf)” 
+            scale="1 1 1"
+            rotation="-90 0 0"
+            visible="false">
+          </a-entity>
+          <a-entity 
+            id="pop2"
+            gltf-model=”url(assets/popup.gltf)” 
+            scale="1 1 1"
+            rotation="-90 0 0"
+            visible="false">
+          </a-entity>
+
+
+          <!-- VIDEO -->
+          <a-video id = "vid" src='#vid-ast' rotation='-90 360 0' position='0.1 0 1.6' height='1.28' width='1.28' visible='false'></a-video>
+
+
+          <!-- SCREEN -->
+          <a-plane id ="screen" color="#CCC" position='0.1 0 1.6' rotation='-90 0 0' height='1.28' width='1.28' visible='false'></a-plane>
+
+
+          <!-- TEXT -->
+          <a-text id = 'text' value="\tINFO:\n\nThis project is created for the purpose of experiencing Augmented Reality by Sahil,\n Arushi and Ronak. You can check your \nshare fund of last 4 year in Augmented \nReality without any app required for the \npurpose.\n You can click on highlighted bars to know\n details and year buttons to check your\n following year details." position = "-0.5 0.1 1.6" scale = "0.3 0.4 0.3" color = "black" rotation="-90 0 0" visible='false'></a-text>
+
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
